@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORTEX STORE | Gen Z Fashion</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #ff4d00;
+            --bg: #f4f4f4;
+            --text: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 2px solid var(--text);
+            background-color: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; }
+        .nav-links a { text-decoration: none; color: var(--text); margin-left: 2rem; font-weight: 600; text-transform: uppercase; }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: var(--text);
+            color: var(--bg);
+        }
+
+        .hero h1 { font-size: 4rem; line-height: 0.9; text-transform: uppercase; max-width: 800px; }
+        .hero span { color: var(--accent); }
+
+        .cta-btn {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: var(--accent);
+            color: var(--bg);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid var(--accent);
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .cta-btn:hover { background-color: transparent; color: var(--accent); }
+
+        .features {
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            border-bottom: 2px solid var(--text);
+        }
+
+        .feature-card { border: 1px solid var(--text); padding: 2rem; background: white; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; }
+
+        .shop-section { padding: 4rem 5%; border-bottom: 2px solid var(--text); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+        .product-card {
+            border: 1px solid var(--text);
+            padding: 1rem;
+            text-align: center;
+            background: white;
+            transition: transform 0.2s;
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 5px 5px 0px var(--text); }
+
+        .product-img {
+            height: 350px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; }
+
+        .social-feed { padding: 4rem 5%; text-align: center; }
+        .contact-section { padding: 4rem 5%; background-color: var(--text); color: var(--bg); text-align: center; }
+
+        footer { background-color: var(--primary); color: white; padding: 2rem 5%; text-align: center; border-top: 1px solid #333; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Nortex Store</div>
+        <div class="nav-links">
+            <a href="#shop">Shop</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Wear the <span>Vibe</span>. Own the Streets.</h1>
+        <p style="margin-top: 1rem; font-size: 1.2rem;">Premium Oversized Tees | Heavyweight Fabric</p>
+        <a href="#shop" class="cta-btn">Shop Collection</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Premium Cotton</h3>
+            <p>Heavyweight fabric that falls perfectly. Durable, breathable, and built for comfort.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Oversized Fit</h3>
+            <p>Designed for the Gen Z silhouette. Relaxed shoulders and a boxy cut.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Kanpur Origins</h3>
+            <p>Locally sourced, globally styled. Representing the new wave of streetwear.</p>
+        </div>
+    </section>
+
+    <section id="shop" class="shop-section">
+        <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; text-align: center;">Latest Drops</h2>
+        
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="bloodline.jpg" alt="Blood Line Oni">
+                </div>
+                <h3 style="text-transform: uppercase;">Blood Line Oni</h3>
+                <p style="color: #666;">Back Print | Premium Fit</p>
+                <p style="font-weight: bold; font-size: 1.2rem; margin: 0.5rem 0;">₹599</p>
+                <a href="https://wa.me/919336728292?text=I want to buy Blood Line Oni Tee" target="_blank" class="cta-btn" style="font-size: 0.8rem;">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="batman.jpg" alt="Dark Knight">
+                </div>
+                <h3 style="text-transform: uppercase;">Dark Knight Edition</h3>
+                <p style="color: #666;">Front & Back Print</p>
+                <p style="font-weight: bold; font-size: 1.2rem; margin: 0.5rem 0;">₹599</p>
+                <a href="https://wa.me/919336728292?text=I want to buy Dark Knight Tee" target="_blank" class="cta-btn" style="font-size: 0.8rem;">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="insomnia.jpg" alt="Insomnia Club">
+                </div>
+                <h3 style="text-transform: uppercase;">Insomnia Club</h3>
+                <p style="color: #666;">White Oversized</p>
+                <p style="font-weight: bold; font-size: 1.2rem; margin: 0.5rem 0;">₹599</p>
+                <a href="https://wa.me/919336728292?text=I want to buy Insomnia White Tee" target="_blank" class="cta-btn" style="font-size: 0.8rem;">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="flame.jpg" alt="Pink Flame">
+                </div>
+                <h3 style="text-transform: uppercase;">Pink Flame</h3>
+                <p style="color: #666;">Cyber Aesthetic</p>
+                <p style="font-weight: bold; font-size: 1.2rem; margin: 0.5rem 0;">₹599</p>
+                <a href="https://wa.me/919336728292?text=I want to buy Pink Flame Tee" target="_blank" class="cta-btn" style="font-size: 0.8rem;">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="frost.jpg" alt="Frost Edition">
+                </div>
+                <h3 style="text-transform: uppercase;">Frost Edition</h3>
+                <p style="color: #666;">Blue Cyber Print</p>
+                <p style="font-weight: bold; font-size: 1.2rem; margin: 0.5rem 0;">₹1199</p>
+                <a href="https://wa.me/919336728292?text=I want to buy Frost Edition Tee" target="_blank" class="cta-btn" style="font-size: 0.8rem;">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="velvet.jpg" alt="Velvet Curse">
+                </div>
+                <h3 style="text-transform: uppercase;">Velvet Curse</h3>
+                <p style="color: #666;">Gothic Aesthetic</p>
+                <p style="font-weight: bold; font-size: 1.2rem; margin: 0.5rem 0;">₹599</p>
+                <a href="https://wa.me/919336728292?text=I want to buy Velvet Curse Tee" target="_blank" class="cta-btn" style="font-size: 0.8rem;">Buy Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="feed" class="social-feed">
+        <h2>Follow @nortex.storee</h2>
+        
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-bbf7c317-d404-4856-aa56-eb3450ec81ac" data-elfsight-app-lazy></div>
+        </section>
+
+    <section id="contact" class="contact-section">
+        <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 1rem;">Get in Touch</h2>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://wa.me/919336728292" style="background-color: var(--accent); color: var(--bg); padding: 1rem 2rem; text-decoration: none; text-transform: uppercase; font-weight: bold;">WhatsApp Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nortex Store. Made in Kanpur.</p>
+    </footer>
+
+</body>
+</html>
